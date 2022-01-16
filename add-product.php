@@ -83,7 +83,7 @@ include 'db.php';
                 $type2 = $type1[1];
 
                 $newname = 'product'.time().'.'.$type2;
-                echo './product/' .$newname;
+                echo '/product/' .$newname;
 
                 //file yg diizinkan
                 $allowed_file = array('jpg','jpeg','png','gif','apng');
@@ -95,7 +95,7 @@ include 'db.php';
                 else{
                 //    move_uploaded_file($tmp_name, '/var/www/Commiss-php-native/product' .$newname );
 
-                   if(move_uploaded_file($tmp_name, '/product' .$newname )){
+                   if(move_uploaded_file($tmp_name, '/product/' .$newname )){
                        echo 'berhasil terupload';
                    }
                    else{
