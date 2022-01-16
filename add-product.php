@@ -77,11 +77,13 @@ include 'db.php';
                 $filename = $_FILES['image']['name'];
                 $tmp_name = $_FILES['image']['tmp_name'];
                 echo $tmp_name;
+                
 
                 $type1 = explode('.',$filename);
                 $type2 = $type1[1];
 
                 $newname = 'product'.time().'.'.$type2;
+                echo './product/' .$newname;
 
                 //file yg diizinkan
                 $allowed_file = array('jpg','jpeg','png','gif','apng');
