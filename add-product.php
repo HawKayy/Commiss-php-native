@@ -95,7 +95,7 @@ include 'db.php';
                 else{
                 //    move_uploaded_file($tmp_name, '/var/www/Commiss-php-native/product' .$newname );
 
-                   if(move_uploaded_file($tmp_name, '/product/' .$newname )){
+                   if(move_uploaded_file($tmp_name,  $newname )){
                        echo 'berhasil terupload';
                    }
                    else{
