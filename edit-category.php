@@ -51,8 +51,8 @@ include 'db.php';
                 $name = ucwords($_POST['name']);
 
                 $update = mysqli_query($conn, "UPDATE tb_category SET
-                                                category_name = '".$name."'
-                                                WHERE category_id = '".$c->category_id."'");
+                                                category_name = '$name'
+                                                WHERE category_id = '$c->category_id'");
             if ($update){
                 echo '<script>alert("Edit Data Category Successfull")</script>';
                 echo '<script>window.location="data-category.php"</script>';

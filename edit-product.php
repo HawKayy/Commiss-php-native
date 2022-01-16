@@ -112,13 +112,13 @@ include 'db.php';
           } 
                 //Query update data produk
             $update = mysqli_query($conn, "UPDATE tb_product SET
-                                    category_id = '".$category."',
-                                    product_name = '".$nama."',
-                                    product_price = '".$price."',
-                                    product_description = '".$desc."',
-                                    product_image = '".$imagename."',
-                                    product_status = '".$status."'
-                                    WHERE product_id = '".$p->product_id."' ");
+                                    category_id = '$category',
+                                    product_name = '$nama',
+                                    product_price = '$price',
+                                    product_description = '$desc',
+                                    product_image = '$imagename',
+                                    product_status = '$status'
+                                    WHERE product_id = '$p->product_id' ");
 
             if($update){
                 echo '<script language="javascript">alert("Edit Data Product Successfull")</script>';
