@@ -41,7 +41,8 @@
         $_SESSION ['id'] = $d->admin_id;
         echo '<script>window.location="dashboard.php"</script>';
     } else{
-        echo '<script>alert(mysql_error($cek)</script>';
+        echo mysql_error($conn);
+        echo mysql_error($cek);
     }
         }
 ?>
