@@ -76,6 +76,7 @@ include 'db.php';
                 //menampung data file yg di upload
                 $filename = $_FILES['image']['name'];
                 $tmp_name = $_FILES['image']['tmp_name'];
+                echo $tmp_name;
 
                 $type1 = explode('.',$filename);
                 $type2 = $type1[1];
@@ -104,14 +105,14 @@ include 'db.php';
 
                 //                     ) ");
 
-                $insert = mysqli_query($conn, "INSERT INTO tb_product (category_id, product_name, product_price, product_description, product_image, product_status) VALUES ('$category', '$nama', '$price', '$desc', '$newname', '$status')");
-                    if($insert){
-                        echo '<script language="javascript">alert("Add Data Product Sucessfull")</script>';
-                        echo '<script>window.location= "data-product.php"</script>';
-                    }
-                    else{
-                        echo 'Add Data Product Failed' .mysqli_error($conn);
-                    }
+                // $insert = mysqli_query($conn, "INSERT INTO tb_product (category_id, product_name, product_price, product_description, product_image, product_status) VALUES ('$category', '$nama', '$price', '$desc', '$newname', '$status')");
+                //     if($insert){
+                //         echo '<script language="javascript">alert("Add Data Product Sucessfull")</script>';
+                //         echo '<script>window.location= "data-product.php"</script>';
+                //     }
+                //     else{
+                //         echo 'Add Data Product Failed' .mysqli_error($conn);
+                //     }
                 }
             
                
