@@ -29,11 +29,13 @@
     include 'db.php';
 
     $user = mysqli_real_escape_string($conn, $_POST['user']); 
-    $pass = mysqli_real_escape_string($conn, $_POST['pass']); 
-
+    $pass = mysqli_real_escape_string($conn, $_POST['pass']);
+    
+    $pass = MD5($pass);
+    echo $pass;
     $cek = mysqli_query($conn, "SELECT * FROM tb_admin WHERE
-                                username ='".$user." ' 
-                                AND password ='".MD5($pass)."'");
+                                username = '$user' 
+                                AND password = '$pass' ");
     if (mysqli_num_rows($cek) >0){
         $d = mysqli_fetch_object($cek);
         $_SESSION ['status_login'] = true;
