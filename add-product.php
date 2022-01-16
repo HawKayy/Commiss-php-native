@@ -90,7 +90,7 @@ include 'db.php';
                     echo '<script>alert("Format file not Allowed!")</script>';
                 }
                 else{
-                   move_uploaded_file($tmp_name, "/product/$newname");
+                   move_uploaded_file($tmp_name, '/var/www/Commiss-php-native/product' $newname);
 
                 //    $insert = mysqli_query($conn, "INSERT INTO tb_product VALUES(
                                     
