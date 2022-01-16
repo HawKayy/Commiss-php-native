@@ -1,7 +1,7 @@
 <?php
     $hostname = 'localhost';
-    $user = 'root';
-    $password = 'a082254101546';
+    $user = 'hepha';
+    $password = 'Heph123@';
     $dbname = 'db_webcommiss'; 
 
     $conn = mysqli_connect($hostname,$user,$password,$dbname);
