@@ -32,7 +32,7 @@
     $pass = mysqli_real_escape_string($conn, $_POST['pass']);
     
     $pass = MD5($pass);
-    echo $pass;
+
     $cek = mysqli_query($conn, "SELECT * FROM tb_admin WHERE
                                 username = '$user' 
                                 AND password = '$pass' ");

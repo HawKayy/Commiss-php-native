@@ -93,8 +93,14 @@ include 'db.php';
                     echo '<script>alert("Format file not Allowed!")</script>';
                 }
                 else{
-                   move_uploaded_file($tmp_name, '/var/www/Commiss-php-native/product' .$newname );
+                //    move_uploaded_file($tmp_name, '/var/www/Commiss-php-native/product' .$newname );
 
+                   if(move_uploaded_file($tmp_name, '/product' .$newname )){
+                       echo 'berhasil terupload';
+                   }
+                   else{
+                       echo 'gagal upload';
+                   }
                 //    $insert = mysqli_query($conn, "INSERT INTO tb_product VALUES(
                                     
                 //                     '".$category."',
