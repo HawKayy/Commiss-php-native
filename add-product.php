@@ -93,7 +93,7 @@ include 'db.php';
                     echo '<script>alert("Format file not Allowed!")</script>';
                 }
                 else{
-                //    move_uploaded_file($tmp_name, '/var/www/Commiss-php-native/product' .$newname );
+                //move_uploaded_file($tmp_name, '/var/www/Commiss-php-native/product' .$newname );
 
                    if(move_uploaded_file($tmp_name, './product/'  .$newname )){
                        echo 'berhasil terupload';
@@ -113,14 +113,14 @@ include 'db.php';
 
                 //                     ) ");
 
-                // $insert = mysqli_query($conn, "INSERT INTO tb_product (category_id, product_name, product_price, product_description, product_image, product_status) VALUES ('$category', '$nama', '$price', '$desc', '$newname', '$status')");
-                //     if($insert){
-                //         echo '<script language="javascript">alert("Add Data Product Sucessfull")</script>';
-                //         echo '<script>window.location= "data-product.php"</script>';
-                //     }
-                //     else{
-                //         echo 'Add Data Product Failed' .mysqli_error($conn);
-                //     }
+                $insert = mysqli_query($conn, "INSERT INTO tb_product (category_id, product_name, product_price, product_description, product_image, product_status) VALUES ('$category', '$nama', '$price', '$desc', '$newname', '$status')");
+                    if($insert){
+                        echo '<script language="javascript">alert("Add Data Product Sucessfull")</script>';
+                        echo '<script>window.location= "data-product.php"</script>';
+                    }
+                    else{
+                        echo 'Add Data Product Failed' .mysqli_error($conn);
+                    }
                 }
             
                
