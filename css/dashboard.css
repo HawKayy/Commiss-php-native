@@ -166,6 +166,16 @@ footer{
     padding: 5px;
     box-sizing: border-box;
 }
+.container form button{
+        width: 100%;
+        padding: 5px 0;
+        border: none;
+        background-color:#2979ff;
+        font-size: 18px;
+        color: #fafafa;
+        cursor: pointer;
+}
+
 @media screen and (max-width: 768px){
     .container {
         width: 90%;

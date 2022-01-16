@@ -1,7 +1,10 @@
 <?php
     include 'db.php';
+    session_start();
     $contact = mysqli_query($conn, "SELECT admin_telp, admin_email, admin_address FROM tb_admin WHERE admin_id = 1");
     $a = mysqli_fetch_object($contact);
+    
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +23,15 @@
                     <h1><a href="index.php">Kay's Gallery</a></h1>
                 <ul>
                     <li><a href="product.php">Product</a></li>
+                    <?php if($_SESSION['status_login'] == true){
+                     echo '<li><a href="logout.php">Logout</a></li>';
+                    }else { 
+                    echo '<li><a href="login.php">Login</a></li>';
+                    echo '<li><a href="register.php">Register</a></li>';
+                    
+                    }?>
                 </ul>
+            
             </div>
         </header>
         
