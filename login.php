@@ -45,6 +45,7 @@
     } else{
         echo mysql_error($conn);
         echo mysql_error($cek);
+        echo '<script>alert("Username or Password incorrect")';
     }
         }
 ?>
